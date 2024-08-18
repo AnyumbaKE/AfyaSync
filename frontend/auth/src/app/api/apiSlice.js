@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+// eslint-disable-next-line
 import { setCredentials, logOut } from '../../features/auth/authSlice';
 
 // Environment variable for API URL

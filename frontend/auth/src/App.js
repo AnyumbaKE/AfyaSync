@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+// eslint-disable-next-line
 import Public from './components/Public';
 import Login from './features/auth/Login';
 
