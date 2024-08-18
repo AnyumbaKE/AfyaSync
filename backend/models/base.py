@@ -35,6 +35,11 @@ class BM:
         models.database.save()
         
     def delete(self):
-        # Delete the instance from the database
+        # Deleting the instance from the database
         models.database.delete(self)
+    
+    def archive(self):
+        setattr(self, "archived", True)
+        # Saving the instance after achiving
+        self.save()
         
