@@ -26,3 +26,11 @@ class BM:
         
         # Save the instance after initialization
         self.save()
+    
+    def save(self):
+        setattr(self, "modified_at", int(datetime.now().timestamp()))
+        # Adding the instance to the database session
+        models.database.new(self)
+        # Saving changes to the database
+        models.database.save()
+        
