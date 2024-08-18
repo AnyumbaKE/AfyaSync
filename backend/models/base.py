@@ -34,3 +34,7 @@ class BM:
         # Saving changes to the database
         models.database.save()
         
+    def delete(self):
+        # Delete the instance from the database
+        models.database.delete(self)
+        
