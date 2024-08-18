@@ -40,6 +40,6 @@ class BM:
     
     def archive(self):
         setattr(self, "archived", True)
-        # Saving the instance after achiving
+        # Saving the instance after archiving
         self.save()
         
