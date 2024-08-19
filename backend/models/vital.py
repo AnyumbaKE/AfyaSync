@@ -28,6 +28,18 @@ class Vital(BM, Base):
     
     # temperature measurement
     temp = Column(Double)
-    #Blood pressure measurement
+    # Blood pressure measurement
     bp = Column(String(40))
+    # Beats per minutes (heart rate)
+    bpm = Column(Integer)
+    # weight measurement
+    weight = Column(Double)
+    # height measurement
+    height = Column(Double)
+    # glucose level measurement
+    glucose = Column(Double)
+    # custom additional date for vitals
+    custom = Column(String(2048))
+    # additional notes related to the vitals
+    notes = Column(String(2048))
     
