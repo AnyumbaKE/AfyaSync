@@ -6,9 +6,12 @@ app = Flask(__name__)
 def home():
     return 'Home Page'
 
-@app.route('/about')
-def about():
-    return 'About Page'
+# Display the home page of the API
+@app.route("/", method=["GET"], strict_slashes=False)
+def home():
+    return jsonify({"message": "Welcome to AfyaSync core API"})
 
+# run the Flask app in debug mode
 if __name__ == '__main__':
-    app.run(debug=True)
+    with app.app_context():
+        app.run(debug=True, host=host, port=port)
