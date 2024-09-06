@@ -13,7 +13,7 @@ function App() {
     <Routes>
       <Route path="login" element={<Login />} />
       <Route index element={<Login />} />
-        {/* pulic routes*/}
+        {/* public routes*/}
         
         {/* private routes*/}
     </Routes>
