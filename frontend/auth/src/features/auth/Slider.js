@@ -1,5 +1,3 @@
-// src/Slider.js
-
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
 
@@ -7,8 +5,11 @@ const images = [
   './assets/image1.jpg',
   './assets/image2.jpg',
   './assets/image3.jpg',
-  './assets/image4.jpg'
-];
+  './assets/image4.jpg',
+  './assets/image5.jpg',
+  './assets/image6.jpg',
+  './assets/image7.jpg'
+]; 
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,7 +17,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

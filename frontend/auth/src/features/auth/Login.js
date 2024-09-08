@@ -1,5 +1,3 @@
-// src/Login.js
-
 import React, { useRef, useState } from "react";
 import { useLoginMutation } from "./authApiSlice";
 import * as Yup from "yup";
@@ -66,11 +64,11 @@ const Login = () => {
   }
 
   return (
-    <div className="flex min-h-screen">
-      <div className="w-1/2 h-screen">
+    <div className="flex h-screen">
+      <div className="w-1/2 h-full">
         <Slider /> {/* Display the slider on the left side */}
       </div>
-      <div className="w-1/2 h-screen flex items-center justify-center bg-white">
+      <div className="w-1/2 h-full flex items-center justify-center bg-white">
         <div className="w-full max-w-md p-8">
           <Formik
             initialValues={{
