@@ -1,5 +1,10 @@
 import React from 'react';
 
+
+/**
+ * LoadingScreen component displays a loading animation.
+ * This component is used to indicate that data is being loaded or a process is running.
+ */
 const LoadingScreen = () => {
  return (
     <div className='flex space-x-2 justify-center items-center bg-blue-500 h-screen z-1000 backdrop-blur-md'>
@@ -10,4 +15,8 @@ const LoadingScreen = () => {
     </div>
  );
 };
+
+/**
+ * Exports the LoadingScreen component.
+ */
 export default LoadingScreen;

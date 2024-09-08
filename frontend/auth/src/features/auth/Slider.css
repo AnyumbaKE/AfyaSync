@@ -1,0 +1,29 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 400%;
+}
+
+.slide {
+  flex: 1 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+}
