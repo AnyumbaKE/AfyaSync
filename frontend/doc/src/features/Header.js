@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import MediaQuery from 'react-responsive';
 import { useGetHcwByIdQuery } from './hcw/hcwApiSlice';
-import logo from '../inverted_logo.jpg';
+import logo from '../inverted_logo.png';
 
 /**
  * Header component displays the header of the application.
