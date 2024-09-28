@@ -214,20 +214,20 @@ import ViewPatient from "./ViewPatient";
               label={"First Name"}
               name="firstName"
               type="text"
-              placeholder="Sabah"
+              placeholder="Stanley"
             />
             <MyTextInput
               label={"Last Name"}
               name="lastName"
               type="text"
-              placeholder="Hasbi"
+              placeholder="Anyumba"
             />
 
             <MyTextInput
               label={"Phone"}
               name="phoneNumber"
               type="text"
-              placeholder="(406) 123-4567"
+              placeholder="0728976018"
             />
             <MyTextInput
               label={"Email Address"}
