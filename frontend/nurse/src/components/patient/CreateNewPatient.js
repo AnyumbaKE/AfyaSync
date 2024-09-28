@@ -197,6 +197,8 @@ import ViewPatient from "./ViewPatient";
             .max(20, "Must be 20 characters or less")
             .required("Required"),
           phoneNumber: Yup.string()
+            .matches(/^0\d{9}$/, "Must be 10 digits starting with 0")
+            .length(10, "Phone number must be exactly 10 digits long.")
             .required("Required"),
           email: Yup.string().email("invalid email address").required("Required"),
           CIN: Yup.string()
@@ -205,7 +207,8 @@ import ViewPatient from "./ViewPatient";
             .oneOf(["male", "female", "others", "not_say"], "Invalid Sex")
             .required("Required"),
           birthDate: Yup.date().required("Required"),
-          username: Yup.string(),
+          username: Yup.string()
+          .required("Required"),
           address: Yup.string().required("Required"),
         })}
         onSubmit={handleSubmit}
