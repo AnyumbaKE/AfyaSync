@@ -227,7 +227,7 @@ import ViewPatient from "./ViewPatient";
               label={"Phone"}
               name="phoneNumber"
               type="text"
-              placeholder="0728976018"
+              placeholder="0722000000"
             />
             <MyTextInput
               label={"Email Address"}
@@ -264,7 +264,7 @@ import ViewPatient from "./ViewPatient";
             label={"Address"}
             name="address"
             type="text"
-            placeholder="No. 0, Test Str, Example Estate"
+            placeholder="47419 Matumbato Close Off Hospital Road, Upperhill, Nairobi"
           />
 
           <div className="flex justify-evenly lg:justify-end gap-5">
