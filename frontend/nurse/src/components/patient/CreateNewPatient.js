@@ -189,9 +189,11 @@ import ViewPatient from "./ViewPatient";
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
+            .matches(/^[A-Za-zÀ-ÿ]+$/, "Must contain only alphabets")
             .max(15, "Must be 15 characters or less")
             .required("Required"),
           lastName: Yup.string()
+            .matches(/^[A-Za-zÀ-ÿ]+$/, "Must contain only alphabets")
             .max(20, "Must be 20 characters or less")
             .required("Required"),
           phoneNumber: Yup.string()
