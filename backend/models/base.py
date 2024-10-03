@@ -50,7 +50,7 @@ class BM:
             # saving the instance after archiving
             self.save()
 
-        def to_dict(self):
+        def to_dict(self, timestamp_to_str):
             """returns a dictionary containing all keys/values of the instance"""
             from api.base import (
                 timestamp_to_str,
