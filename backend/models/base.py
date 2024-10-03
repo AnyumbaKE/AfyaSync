@@ -49,3 +49,26 @@ class BM:
             setattr(self, "archived", True)
             # saving the instance after archiving
             self.save()
+
+        def to_dict(self):
+            """returns a dictionary containing all keys/values of the instance"""
+            from api.base import (
+                timestamp_to_str,
+            ) # import a function for timestamp conversion
+
+            new_dict = {}
+            for key, value in self.__dict__.items():
+                if isinstance(value, (int, float, str, bool, list, dict, tuple)):
+                    if key in ["created_at", "modified_at", "time"]:
+                        # Format timestamp to string
+                        value = timestamp_to_str(
+                            value, "%Y-%m-%d at %I:%M %p"
+                        )
+                    if key == "birthDate":
+                        # Format birthdate to string
+                        value = timestamp_to_str(
+                            value, "%Y-%m-%d"
+                        )
+                    new_dict[key] = value
+            # Return the dictionary representation of the instance
+            return new_dict
