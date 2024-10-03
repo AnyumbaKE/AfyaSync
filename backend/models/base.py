@@ -2,6 +2,7 @@ from uuid import uuid4
 from sqlalchemy import Boolean, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
+import models
 
 # Declaring a base class for SQLAlchemy models
 Base = declarative_base()
@@ -30,3 +31,11 @@ class BM:
         # Generating a unique ID for the instance
         setattr(self, "id", str(uuid4()))
         self.save() # Save the instance after initialization
+
+        def save(self):
+            """saves the update with the current datetime and saves the instance"""
+            setattr(self, "modified_at", int(datetime.now().timestamp()))
+            # adds the instance to the database session
+            models.database.new(self)
+            # Saves changes to the database
+            models.database.save()
